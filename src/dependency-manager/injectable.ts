@@ -1,7 +1,7 @@
-import { dependencyContainer } from "./dependencies-container";
+import { dependenciesManager } from "./dependencies-manager";
 
 export const Injectable = (key: string) => {
   return (InjectableClass: any) => {
-    dependencyContainer.set(key, new InjectableClass());
+    dependenciesManager.set(key, new InjectableClass());
   };
 };

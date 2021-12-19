@@ -1,26 +1,7 @@
-import { dependencyMapper } from "./dependency-mapper";
+import { InfoLogger } from "../services/logger/info-logger";
+import { ErrorLogger } from "../services/logger/error-logger";
 
-class DependenciesContainer {
-  private dependencies: Record<string, any>;
-
-  constructor() {
-    this.dependencies = {};
-    dependencyMapper.forEach(({ key, value }) => {
-      this.set(key, new value());
-    });
-  }
-
-  set(key: string, dependency: any) {
-    this.dependencies[key] = dependency;
-  }
-
-  get(key: string) {
-    const existingDependency = this.dependencies[key];
-    if (!existingDependency) {
-      throw new Error("Dependency not found!");
-    }
-    return existingDependency;
-  }
-}
-
-export const dependencyContainer = new DependenciesContainer();
+export const dependenciesContainer = [
+  { key: "INFO_LOGGER", value: InfoLogger },
+  { key: "ERROR_LOGGER", value: ErrorLogger },
+];
