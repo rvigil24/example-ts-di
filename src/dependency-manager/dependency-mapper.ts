@@ -1,5 +1,5 @@
-import { InfoLogger } from "../logger/info-logger";
-import { ErrorLogger } from "../logger/error-logger";
+import { InfoLogger } from "../services/logger/info-logger";
+import { ErrorLogger } from "../services/logger/error-logger";
 
 export const dependencyMapper = [
   { key: "INFO_LOGGER", value: InfoLogger },

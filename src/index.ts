@@ -1,5 +1,5 @@
-import { Inject } from "./services/dependency-manager/inject";
-import { Injectable } from "./services/dependency-manager/injectable";
+import { Inject } from "./dependency-manager/inject";
+import { Injectable } from "./dependency-manager/injectable";
 import { ErrorLogger } from "./services/logger/error-logger";
 import { InfoLogger } from "./services/logger/info-logger";
 import { LoggerService } from "./services/logger/logger-service";
