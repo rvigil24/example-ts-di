@@ -1,6 +1,6 @@
 import { dependencyMapper } from "./dependency-mapper";
 
-export class DependenciesContainer {
+class DependenciesContainer {
   private dependencies: Record<string, any>;
 
   constructor() {
@@ -22,3 +22,5 @@ export class DependenciesContainer {
     return existingDependency;
   }
 }
+
+export const dependencyContainer = new DependenciesContainer();
